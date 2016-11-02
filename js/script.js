@@ -39,20 +39,6 @@ var settings = {
 		"newWindow": true
 	},
 	
-	"search": {
-		"engines": [
-			["http://www.google.com/search", "q", "Google", "sg"],
-			["http://www.google.com/images", "q", "Google Images", "si"],
-			["http://search.yahoo.com/search", "p", "Yahoo", "sy"],
-			["http://wikipedia.org/w/index.php", "w", "Wikipedia", "sw"],
-			["http://www.dict.cc", "s", "dict.cc", "sd"],
-			["http://dict.leo.org", "search", "leo", "sl"],
-			["http://www.flickr.com/search", "q", "flickr", "sf"],
-			["http://browse.deviantart.com/", "q", "deviantArt", "sa"]
-		],
-		"focusSearch": false
-	},
-	
 	"clock": {
 		"showClock": true
 	},
@@ -185,45 +171,9 @@ $(document).ready(function() {
 	$('body').append(html);
 
 
-	/*  Animation Time!  *\
-	\*===================*/
-	
-	/*  Hide lists  *\
-	\*==============*/
-	if (settings.animation.hideLinks) {
-		$('ul').slideUp();
-
-		/*  Show on hover  *\
-		\*=================*/
-		$('.block').mouseenter(function() {
-			$('ul', this).slideDown();
-		});
-
-		/*  Hide on unhover  *\
-		\*===================*/
-		$('.block').mouseleave(function() {
-			$('ul', this).slideUp();
-		});
-	}
 
 
-	/*  Search Engines  *\
-	\*==================*/
 
-	var search = '<div id="searches">';
-
-	for (var i = 0; i < settings.search.engines.length; i++) {
-		var engine = settings.search.engines[i];
-		search = search + searchBox(engine[0], engine[1], engine[2]);
-		if(engine[3]) {
-			var jsSearchUrl=engine[0]+"?"+engine[1]+"=";
-			var jsSearchPrompt="prompt('Search "+engine[2]+":')";
-			var jsSearch="'"+jsSearchUrl+"'+"+jsSearchPrompt;
-			shortcuts[engine[3]] = jsSearch;
-      }
-	}
-
-	search = search + '</div>';
 
 	/*  Add to page  *\
 	\*===============*/
