@@ -31,16 +31,16 @@
 */
 
 body {
-	background: #151515;										/* Page background */
-	color: #999;														/* Font color */
-	padding: 150px;													/* Padding between link blocks and edge */
+	background-image: url("wpp.jpg");										/* Page background */
+	color: #ff84bc;														/* Font color */
+	padding: 12px;													/* Padding between link blocks and edge */
 	font-family: "Museo", "Helvetica Neue", sans-serif;	/* Font */
 	text-shadow: rgba(0,0,0,0.6) 1px 1px 0; /* Text Shadow */
 }
 
 a {
-	color: #999;														/* Link Color */
-	font-size: 11px;												/* Link Size */
+	color: #ffffff;														/* Link Color */
+	font-size: 18px;												/* Link Size */
 	text-decoration: none;									/* Remove underlines */
 }
 
@@ -49,10 +49,10 @@ a:hover {
 }
 
 .block {
-	border-left: 1px solid #999;						/* Left border of link block */
+	border-left: 0px solid #999;						/* Left border of link block */
 	float: left;
-	padding: 1em;														/* Padding around link block */
-	width: 160px;														/* Link block width */
+	padding: 2.5em;														/* Padding around link block */
+	width: 240px;														/* Link block width */
 }
 
 h1 {
@@ -61,18 +61,18 @@ h1 {
 }
 
 ul {
-	padding: 0.25em;
+	padding: 0.002em;
 }
 
 ul li {
 	list-style: none;
-	padding: 5px;
+	padding: 10px;
 }
 
 li img {
 	width: 16px;
 	border-width: 0;
-	margin: 5px;
+	margin: 6px;
 	vertical-align: middle;
 }
 
